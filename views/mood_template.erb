@@ -19,13 +19,17 @@
         </div>
       </div>
   
-    <p><%= @results %>
+    <p>
       <h3>INGREDIENTS:</h3>
-    <li><h4><%= "Here is what you are going to need: #{@results.result.ingredients}" %></h4></li>
+    <li><h4>Here is what you are going to need: <ol><% @results.result.ingredients.each do |ingred| %>
+        <li><%= ingred %> </li>
+      <% end %>
+      </ol>
+    </h4></li>
       <h3>TIME:</h3>
     <li><h4><%= "Your recipe will take approximately #{@results.result.response["totalTimeInSeconds"]/60} minutes long" %></h4></li>
       <h3>RATING:</h3>
-    <li><h4><%= "This recipe has an overall rating of #{@results.result.response["rating"]} stars out of 5" %></h4></li><p>
+    <li><h4><%= "This recipe has an overall rating of #{@results.result.response["rating"]} stars out of 5" %></h4></li></p>
     
      
 
