@@ -1,0 +1,32 @@
+<!doctype>
+<html>
+
+   <head>
+      <title>Mood Food</title>
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+
+
+  <body>
+    <div class="container">
+      
+     <div class="row">
+        <div class="col-xs-12 text-center">
+          <h1>Mood Food</h1>
+          <h4>Ta da! Here are your results to help you get through these enraging times!!</h4>
+          <h4>Our scientific beliefs are that you are in desperate need for some Ice Cream! Keep refreshing the page for a new fun ice cream recipe each time!</h4>
+        </div>
+      </div>
+  
+    <p><%= @results %>
+    <li><%= "Here is what you are going to need: #{@results.result.response['ingredients']}" %></li>
+    <li><%= "Your recipe will take approximately #{@results.result.response['totalTimeInSeconds']/60} minutes long" %></li>
+    <li><%= "This recipe has an overall rating of #{@results.result.response['rating']} stars out of 5" %></li><p>
+     
+
+
+    </div>
+  </body>
+
+</html>
