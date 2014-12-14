@@ -1,0 +1,39 @@
+<!doctype>
+<html>
+
+   <head>
+      <title>Mood Food</title>
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+
+
+  <body>
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h1>Mood Food</h1>
+          <h2>Ta da! Here are your results to help you get through these <%= "#{@mood}" %> times!!</h4>
+          <h2>Our scientific beliefs are that you are in desperate need for some <%= "#{@searched_food}" %>! Keep refreshing the page for a new fun <%= "#{@searched_food}" %> recipe each time!</h4>
+        </div>
+      </div>
+  
+    <p><%= @results %>
+      <h3>INGREDIENTS:</h3>
+    <li><h4><%= "Here is what you are going to need: #{@results.result.ingredients}" %></h4></li>
+      <h3>TIME:</h3>
+    <li><h4><%= "Your recipe will take approximately #{@results.result.response["totalTimeInSeconds"]/60} minutes long" %></h4></li>
+      <h3>RATING:</h3>
+    <li><h4><%= "This recipe has an overall rating of #{@results.result.response["rating"]} stars out of 5" %></h4></li><p>
+    
+     
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <a href= <%= @url %> <h1>Your instructions await. Click here...</h1></a>
+      </div>
+    </div>
+  </body>
+
+</html>

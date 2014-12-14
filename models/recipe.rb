@@ -11,7 +11,7 @@ class RecipeFinder
     i = rand(5) + 1
     @result = Yummly.search(food)[i]
     puts result.inspect
-    @url =  "wwww.yummly.com/recipe/#{@result.response["id"]}"
+    @url =  "http://www.yummly.com/recipe/#{@result.response["id"]}"
     puts @url
   end
   

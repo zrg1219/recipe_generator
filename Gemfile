@@ -7,4 +7,5 @@ gem 'sinatra'
 gem 'nokogiri'
 gem 'json'
 gem 'yummly'
+gem 'mailgun'
 
