@@ -626,9 +626,9 @@ class MyApp < Sinatra::Base
   end
 
   get "/weird" do
-    @results = RecipeFinder.new('Quinoa')
+    @results = RecipeFinder.new('Jalapeno')
     @mood = "weird"
-    @searched_food = "Quinoa"
+    @searched_food = "Jalapeno"
     @url = @results.url
     erb :mood_template
   end
